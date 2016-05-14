@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/proyectos', 'ProyectsController@index');
+
+Route::get('/proyectos/{id}', 'ProyectsController@show');

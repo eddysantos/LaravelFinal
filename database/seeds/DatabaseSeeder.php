@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Project;
+use App\Task;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,19 +13,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      $ProyectId = 'Test005';
-        DB::Table('projects')->insert([
-          'nombre'=> $ProyectId,
-          'description'=>'Test project for Laravel',
-          'Expected_Start_Date'=> '2016-05-14',
-          'Expected_Completion'=> '2017-05-14',
+        $project = Project::create([
+          'nombre'=>'Proyecto1',
+          'description'=>'Descripción del proyecto 1',
+          'Expected_Start_Date'=>'2016-05-14'
         ]);
-
         for ($i=0; $i < 7; $i++) {
-          DB::Table('tasks')->insert([
-            'nombre'=>"Task $i",
-            'description'=>'Description for task ' . $i,
-            'fkIdProyect'=>$ProyectId,
+          $task = Task::create([
+            'nombre'=> 'Tarea ' . $i,
+            'description' => 'Descripción de tarea ' . $i,
+            'done' => false,
+            'project_id' => $project->id
           ]);
         }
     }
