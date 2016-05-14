@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddColumnDescriptionToTasks' => $baseDir . '/database/migrations/2016_05_14_165945_add_column_description_to_tasks.php',
+    'AddFkproyectToTasks' => $baseDir . '/database/migrations/2016_05_14_170503_add_fkproyect_to_tasks.php',
+    'ChangeColtypeFkprojectsToTasks' => $baseDir . '/database/migrations/2016_05_14_171729_change_coltype_fkprojects_to_tasks.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProjectsTable' => $baseDir . '/database/migrations/2016_05_14_163203_create_projects_table.php',
     'CreateTasksTable' => $baseDir . '/database/migrations/2016_05_14_163850_create_tasks_table.php',
