@@ -9,4 +9,8 @@ class Project extends Model
     public function tasks(){
       return $this->hasMany('App\Task');
     }
+
+    public function users(){
+      return $this->HasManyThrough('App\User', 'App\UserProject');
+    }
 }

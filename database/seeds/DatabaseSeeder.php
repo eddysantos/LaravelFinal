@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $project = Project::create([
-          'nombre'=>'Proyecto1',
+          'nombre'=>'Proyecto4',
           'description'=>'Descripción del proyecto 1',
           'Expected_Start_Date'=>'2016-05-14'
         ]);
-        for ($i=0; $i < 7; $i++) {
+        for ($i=1; $i <= 22; $i++) {
           $task = Task::create([
             'nombre'=> 'Tarea ' . $i,
             'description' => 'Descripción de tarea ' . $i,

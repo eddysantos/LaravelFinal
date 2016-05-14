@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index');
 Route::get('/proyectos', 'ProyectsController@index');
 
 Route::get('/proyectos/{id}', 'ProyectsController@show');
+
+Route::get('/Proyectos/MisProyectos', 'ProyectsController@me');
